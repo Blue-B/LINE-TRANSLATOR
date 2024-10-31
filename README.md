@@ -19,6 +19,15 @@ AI가 문맥을 고려하여 번역해주기 때문에 더 자연스러운 문�
 블로그 : [Link](https://newstroyblog.tistory.com/574)
 
 
+
+# 🚀 Skills
+![](https://img.shields.io/badge/Line-00C300?style=for-the-badge&logo=line&logoColor=white)
+![](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+
+
+
+
 ## 필요 패키지 설치
 ``` pip install -r requirements.txt```
 
