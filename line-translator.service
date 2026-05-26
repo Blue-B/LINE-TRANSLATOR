@@ -1,0 +1,19 @@
+[Unit]
+Description=LINE KO-JA Translator (Flask + Ollama)
+After=network.target ollama.service
+Wants=ollama.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/line-translator
+EnvironmentFile=/home/ubuntu/line-translator/.env
+ExecStart=/home/ubuntu/line-translator/venv/bin/gunicorn -w 2 -b 127.0.0.1:5005 --timeout 90 app:app
+Restart=on-failure
+RestartSec=3
+# lettomi 보호용 리소스 상한
+MemoryMax=1G
+Nice=10
+
+[Install]
+WantedBy=multi-user.target
