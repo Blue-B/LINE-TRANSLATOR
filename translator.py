@@ -21,10 +21,10 @@ MODEL = os.getenv(
 NUM_THREAD = int(os.getenv("OLLAMA_NUM_THREAD", "4"))
 REQUEST_TIMEOUT = int(os.getenv("TRANSLATE_TIMEOUT", "60"))
 
-# 차별화 ①: 톤 (비즈니스 존댓말 기본). 비우면 미적용.
-DEFAULT_TONE = os.getenv("TRANSLATE_TONE", "Polite and professional business tone")
+# 톤: 번역 말투 지정 (기본 정중한 존댓말). 비우면 미적용.
+DEFAULT_TONE = os.getenv("TRANSLATE_TONE", "Polite and professional tone")
 
-# 차별화 ②: 용어집 (브랜드/제품명 고정). "원문=번역,원문=번역" 형식.
+# 용어집: 특정 단어를 항상 같은 번역으로 고정. "원문=번역,원문=번역" 형식.
 def _parse_glossary(raw: str) -> dict:
     g = {}
     for pair in raw.split(","):
